@@ -28,7 +28,7 @@ export default {
     display: block;
     padding-top: 100px;
     width: 160px;
-    background: url(../assets/images/photos.jpg) no-repeat;
+    background: url(../../assets/images/photos.jpg) no-repeat;
     background-size: 160px 160px;
 }
 
