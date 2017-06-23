@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import myasideinfo from '../components/index/MyAsideInfo'
-import myasidetjnews from '../components/index/MyAsidetjNews'
-import myasideLink from '../components/MyAsideLink'
+import myasideinfo from '@/components/index/MyAsideInfo'
+import myasidetjnews from '@/components/index/MyAsidetjNews'
+import myasideLink from '@/components/common/pages/MyAsideLink'
 export default {
   name: 'myaside',
   components: {

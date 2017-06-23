@@ -21,7 +21,7 @@ export default {
     text-align: center;
     border: 1px solid #eee;
     z-index: 1040;
-    background: #fff url(../assets/images/gotop.png) no-repeat 10px 10px;
+    background: #fff url(../../../assets/images/gotop.png) no-repeat 10px 10px;
     cursor: pointer;
     border-radius: 6px;
     display: block;
