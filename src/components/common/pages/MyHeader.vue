@@ -6,9 +6,10 @@
     </div>
     <div class="rightheader">
       <h5 class="inout">
-        <a href="./login.html">登陆</a>&nbsp;|&nbsp;
-        <a href="./register.html">注册</a>
-        <!--<router-link to="/register">注册</router-link>-->
+        <!--<a href="./login.html">登陆</a>&nbsp;|&nbsp;-->
+        <router-link to="/login">登陆</router-link>&nbsp;|&nbsp;
+        <!--<a href="./register.html">注册</a>-->
+        <router-link to="/register">注册</router-link>
       </h5>
       <h5 class="logout" style="display: none;">
         <a href="javascript:;">注销(<span id="uname"></span>)</a>

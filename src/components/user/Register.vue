@@ -1,38 +1,40 @@
 <template>
-  <div class="login">
-    <div class="login-top">
-      <h2>欢迎</h2>
-      <h3>{{ msg }}</h3>
-    </div>
-    <div class="login-bottom">
-        <form class="form-horizontal" id="signupform" role="form">
-            <div class="user form-group">
-                <label for="username" class="col-sm-2 control-label">邮 箱</label>
-                <input type="text" class="col-sm-10 form-control" id="email" name="email" placeholder="邮箱">
-            </div>
-            <div class="user form-group">
-                <label for="username" class="col-sm-2 control-label">账 号</label>
-                <input type="text" class="col-sm-10 form-control" id="username" name="username" placeholder="用户名">
-            </div>
-            <div class="user-in form-group">
-                <label for="username" class="col-sm-2 control-label">密 码</label>
-                <input type="password" class="col-sm-10 form-control" id="password" name="password" placeholder="密码">
-            </div>
-            <div class="user-in form-group">
-                <label for="username" class="col-sm-2 control-label" style="width: 20%;">确认密码</label>
-                <input type="password" class="col-sm-10 form-control" id="repassword" name="repassword" placeholder="确认密码" style="width: 80%;">
-            </div>
-            <div class="keepme">
-                <div class="regist">
-                    <input type="submit" id="signup" class="btn btn-danger" value="注册" />
-                </div>
-                <div class="clear"> </div>
-            </div>
-        </form>
-    </div>
-    <div class="backon">
-      <p><a href="login.html">&lt;&lt; 返回登陆</a></p>
-      <div class="clear"></div>
+  <div class="app">
+    <div class="login">
+      <div class="login-top">
+        <h2>欢迎</h2>
+        <h3>{{ msg }}</h3>
+      </div>
+      <div class="login-bottom">
+          <form class="form-horizontal" id="signupform" role="form">
+              <div class="user form-group">
+                  <label for="username" class="col-sm-2 control-label">邮 箱</label>
+                  <input type="text" class="col-sm-10 form-control" id="email" name="email" placeholder="邮箱">
+              </div>
+              <div class="user form-group">
+                  <label for="username" class="col-sm-2 control-label">账 号</label>
+                  <input type="text" class="col-sm-10 form-control" id="username" name="username" placeholder="用户名">
+              </div>
+              <div class="user-in form-group">
+                  <label for="username" class="col-sm-2 control-label">密 码</label>
+                  <input type="password" class="col-sm-10 form-control" id="password" name="password" placeholder="密码">
+              </div>
+              <div class="user-in form-group">
+                  <label for="username" class="col-sm-2 control-label" style="width: 20%;">确认密码</label>
+                  <input type="password" class="col-sm-10 form-control" id="repassword" name="repassword" placeholder="确认密码" style="width: 80%;">
+              </div>
+              <div class="keepme">
+                  <div class="regist">
+                      <input type="submit" id="signup" class="btn btn-danger" value="注册" />
+                  </div>
+                  <div class="clear"> </div>
+              </div>
+          </form>
+      </div>
+      <div class="backon">
+        <p><a href="login.html">&lt;&lt; 返回登陆</a></p>
+        <div class="clear"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,31 +50,38 @@ export default {
 }
 </script>
 <style scoped>
+/*@import url("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");*/
 * {
   margin: 0;
   padding: 0;
   border: 0;
 }
-body {
-   background:#18bb9b;
+/*body {
+   background: #18bb9b;
    padding:50px 0px 30px 0px;
    font-family: sans-serif;
    font-size: 100%;
+}*/
+.app {
+   background: #18bb9b;
+   padding:50px 0 30px 0;
+   font-family: sans-serif;
+   font-size: 100%;
 }
-h1 {
+/*h1 {
   font-size: 34px;
   font-weight: 400;
   color: #fff;
   text-align: center;
   margin: 0px 0px 25px 0px;
-}
+}*/
 .login {
   width: 33%;
   margin: 0 auto;
   background: #F8F8F8;
   border-radius: 4px;
 }
-.login-top{
+.login-top {
   background: #E9E9E9;
   border-radius: 4px 4px 0px 0px;
   padding: 11px 0px;
@@ -84,7 +93,7 @@ h1 {
   color: #7A7A7A;
 }
 .login-top h3 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #7A7A7A;
 }
@@ -96,21 +105,21 @@ span.log {
 .login-bottom {
   padding: 23px 23px 23px 23px;
 }
-.login-bottom h3 {
+/*.login-bottom h3 {
   font-size: 15px;
   font-weight: 600;
   color: #737373;
   margin: 10px 0px 10px 0px;
-}
+}*/
 
-.login-bottom .form-horizontal .form-group {
+/*.login-bottom .form-horizontal .form-group {
   margin-right: 0;
   margin-left: 0;
-}
+}*/
 .user,.user-in {
- border: 1px solid #EDEDED;
+  border: 1px solid #EDEDED;
   border-top: 2px solid #EDEDED;
-  background:#fff;
+  background: #fff;
   border-radius: 5px;
   margin-bottom: 1em;
 }
@@ -129,12 +138,13 @@ span.log {
 
 .user .error, .user-in .error {
   color: red;
-  
 }
 
 .user label,.user-in label {
   font-weight: bold;
-  color: #7a7a7a;
+  font-size: 15px;
+  /*color: #7a7a7a;*/
+  color: #000;
   height: 25px;
   line-height: 25px;
 }
@@ -254,7 +264,7 @@ label.checkbox {
   font-size: 17px;
   font-weight: 600;
   width: 100%;
-  padding: 8px 26px;
+  padding: 8px 0;
   margin: 0;
   display: inline-block;
   outline: none;
@@ -266,6 +276,14 @@ label.checkbox {
   width: 80%;
   font-size: 17px;
   font-weight: 600;
+  -webkit-appearance: button;
+  cursor: pointer;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 2em;
 }
 .forgot {
   padding: 15px 0px;
@@ -311,6 +329,7 @@ label.checkbox {
   margin-right: -23px; */
   background-color: #398439;
   padding: 10px 0;
+  border-radius: 0 0 4px 4px;
 }
 .backon p, .backon p a {
   color: #fff;
@@ -333,12 +352,12 @@ span.login-line {
   font-weight: 400;
   color: #fff;
 }
-.copyright p a{
+.copyright p a {
   font-size: 15px;
   font-weight: 400;
   color:  #E21B1B;
 }
-.copyright p a:hover{
+.copyright p a:hover {
 	color: #fff;
 	 transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -347,18 +366,18 @@ span.login-line {
 }
 /*--login form end here--*/
 /*--meadia quiries start here--*/
-@media(max-width:1440px){
+@media(max-width:1440px) {
   .keep-loginbutton input[type="submit"] {
     width: 91%;
   }
 }
 
-@media(max-width:1366px){
+@media(max-width:1366px) {
 .login {
   width: 39%;
 }
 
-@media(max-width:1280px){
+@media(max-width:1280px) {
 .login {
   width: 40%;
 }
@@ -366,7 +385,7 @@ span.login-line {
 h1 {
   font-size: 30px;
 }
-body {
+.app {
   padding: 30px 0px 30px 0px;
 }
 .copyright {
@@ -378,12 +397,12 @@ body {
 }
 
   }
-@media(max-width:1024px){
+@media(max-width:1024px) {
 .login {
   width: 50%;
 }
 
-body {
+.app {
   padding: 28px 0px 30px 0px;
 }
 h1 {
@@ -393,18 +412,18 @@ h1 {
   font-size: 24px;
 }
 }
-@media(max-width:768px){
+@media(max-width:768px) {
 .login {
   width: 67%;
 }	
-body {
+.app {
   padding: 88px 0px 105px 0px;
 }
 .copyright {
   padding: 160px 0px 0px 0px;
 }
 }
-@media(max-width:736px){
+@media(max-width:736px) {
 span.login-line {
   width: 410px;	
 }
@@ -416,11 +435,10 @@ span.login-line {
   font-size: 13px;
 }
 }
-@media(max-width:667px){
+@media(max-width:667px) {
 span.login-line {
   width: 390px;
 }
-
 
 .forgot-register p {
   font-size: 12px;
@@ -430,13 +448,13 @@ span.login-line {
 }
 
 }
-@media (max-width: 667px){
+@media (max-width: 667px) {
 
 .user input[type="text"], .user-in input[type="password"] {
   width: 82%;
 }
 }
-@media(max-width:640px){
+@media(max-width:640px) {
 .login {
   width: 80%;
 }	
@@ -444,7 +462,7 @@ span.login-line {
   font-size: 26px;	
 }
 
-body {
+.app {
   padding: 50px 0px 40px 0px;
 }
 
@@ -454,7 +472,7 @@ body {
 
 }
 
-@media(max-width:480px){
+@media(max-width:480px) {
 
 span.login-line {
   width: 350px;
@@ -485,7 +503,7 @@ h1 {
 }
 }
 
-@media(max-width:414px){
+@media(max-width:414px) {
 
 .user input[type="text"], .user-in input[type="password"] {
   width: 75%;
@@ -500,14 +518,14 @@ h1 {
 }
 
 }
-@media(max-width:384px){
+@media(max-width:384px) {
 
 span.login-line {
   width: 268px;
 }
 }
 
-@media(max-width:320px){
+@media(max-width:320px) {
 .login {
   width: 96%;
 }
@@ -553,7 +571,7 @@ span.login-line {
 .copyright {
   padding: 25px 0px 0px 0px;
 }
-body {
+.app {
   padding: 15px 0px 30px 0px;
 }
 

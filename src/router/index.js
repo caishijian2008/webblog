@@ -10,7 +10,7 @@ import Router from 'vue-router'
 // import MyBlogList from '@/components/bloglist/MyBlogList'
 // import MyPhoto from '@/components/photos/MyPhoto'
 // import MyAbout from '@/components/about/MyAbout'
-// import Register from '@/components/user/Register'
+import Register from '@/components/user/Register'
 import MyIndex from '@/components/index/MyIndex'
 
 Vue.use(Router)
@@ -21,6 +21,11 @@ export default new Router({
       path: '/',
       name: MyIndex,
       component: MyIndex
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
     // {
     //   path: '/',

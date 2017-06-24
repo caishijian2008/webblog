@@ -25,7 +25,7 @@ import mynav from '@/components/common/pages/mynav'
 import myaside from '@/components/common/pages/myaside'
 import myarticle from '@/components/index/myarticle'
 import totopbtn from '@/components/common/pages/totopbtn'
-import myfooter from '../../components/common/pages/myfooter'
+import myfooter from '@/components/common/pages/myfooter'
 export default {
   name: 'myindex',
   components: {
