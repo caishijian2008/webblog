@@ -1,10 +1,14 @@
 <template>
   <!-- <div class="logo"><a href="index.html"></a></div> -->
   <nav id="topnav">
-    <a href="index.html">首页</a>
+    <!--<a href="index.html">首页</a>
     <a href="newlist.html">博文</a>
     <a href="photo.html">相册</a>
-    <a href="about.html">关于我</a>
+    <a href="about.html">关于我</a>-->
+    <router-link to="/">首页</router-link>
+    <router-link to="/bloglist">博文</router-link>
+    <router-link to="/photo">相册</router-link>
+    <router-link to="/about">关于我</router-link>
   </nav>
 </template>
 

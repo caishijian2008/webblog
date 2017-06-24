@@ -27,7 +27,7 @@
           <p><a href="#">忘记密码?</a></p>
           <div class="forgot-register">
             <!--<p>还没有注册? <a href="register.html">点击注册</a></p>-->
-            <p>还没有注册? <router-link to="/register">点击注册</router-link></p>
+            <p>还没有注册? <router-link to="register">点击注册</router-link></p>
           </div>
           <div class="clear"> </div>
         </div>

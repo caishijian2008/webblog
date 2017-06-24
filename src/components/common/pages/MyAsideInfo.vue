@@ -3,7 +3,7 @@
     <div class="avatar"><a href="about.html"><span>关于张三李四</span></a></div>
     <div class="topspaceinfo">
       <h1>执子之手，与子私奔</h1>
-      <p>于千万人之中，我遇见了......咦？人呢？</p>
+      <p>于千万人之中，我遇见了我所遇见的人....</p>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
     display: block;
     padding-top: 100px;
     width: 160px;
-    background: url(../../assets/images/photos.jpg) no-repeat;
+    background: url(../../../assets/images/photos.jpg) no-repeat;
     background-size: 160px 160px;
 }
 

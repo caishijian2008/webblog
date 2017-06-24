@@ -10,7 +10,7 @@
     <myheader></myheader>
     <mynav></mynav>
     <myarticle></myarticle>
-    <myaside></myaside>
+    <myindexaside></myindexaside>
     <totopbtn></totopbtn>
     <div class="clear"></div>
   </div>
@@ -22,7 +22,7 @@
 <script>
 import myheader from '@/components/common/pages/myheader'
 import mynav from '@/components/common/pages/mynav'
-import myaside from '@/components/common/pages/myaside'
+import myindexaside from '@/components/index/myindexaside'
 import myarticle from '@/components/index/myarticle'
 import totopbtn from '@/components/common/pages/totopbtn'
 import myfooter from '@/components/common/pages/myfooter'
@@ -31,7 +31,7 @@ export default {
   components: {
     myheader,
     mynav,
-    myaside,
+    myindexaside,
     myarticle,
     totopbtn,
     myfooter

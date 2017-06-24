@@ -33,7 +33,7 @@
       </div>
       <div class="backon">
         <!--<p><a href="login.html">&lt;&lt; 返回登陆</a></p>-->
-        <p><router-link to="/login">&lt;&lt; 返回登陆</router-link></p>
+        <p><router-link to="login">&lt;&lt; 返回登陆</router-link></p>
         <div class="clear"></div>
       </div>
     </div>
