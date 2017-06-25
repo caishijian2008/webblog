@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: 'myblogs'
+  name: 'myindexblogs'
 }
 </script>
 

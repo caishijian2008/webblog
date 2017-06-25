@@ -11,7 +11,7 @@
 import mybanner from '../../components/index/MyBanner'
 import myindexblogs from '../../components/index/MyIndexBlogs'
 export default {
-  name: 'myarticle',
+  name: 'mylistarticle',
   components: {
     mybanner,
     myindexblogs
