@@ -13,7 +13,7 @@ import Router from 'vue-router'
 import Register from '@/components/user/Register'
 import Login from '@/components/user/Login'
 import MyIndex from '@/components/index/MyIndex'
-import MyBloglist from '@/components/bloglist/MyBloglist'
+import Bloglist from '@/components/bloglist/Bloglist'
 
 Vue.use(Router)
 
@@ -37,7 +37,7 @@ export default new Router({
     {
       path: '/bloglist',
       name: 'Bloglist',
-      component: MyBloglist
+      component: Bloglist
     }
     // {
     //   path: '/',
