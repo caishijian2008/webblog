@@ -56,6 +56,7 @@ export default {
 .topspaceinfo {
     background: #e41635;
     padding: 40px 20px;
+    margin-bottom: 10px;
     color: #fff;
     text-shadow: 1px 1px rgba(0, 0, 0, .3);
 }

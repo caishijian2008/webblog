@@ -14,6 +14,8 @@ import Register from '@/components/user/Register'
 import Login from '@/components/user/Login'
 import MyIndex from '@/components/index/MyIndex'
 import Bloglist from '@/components/bloglist/Bloglist'
+import MyPhoto from '@/components/photos/MyPhoto'
+import MyAbout from '@/components/about/MyAbout'
 
 Vue.use(Router)
 
@@ -38,6 +40,16 @@ export default new Router({
       path: '/bloglist',
       name: 'Bloglist',
       component: Bloglist
+    },
+    {
+      path: '/about',
+      name: 'MyAbout',
+      component: MyAbout
+    },
+    {
+      path: '/photo',
+      name: 'MyPhoto',
+      component: MyPhoto
     }
     // {
     //   path: '/',

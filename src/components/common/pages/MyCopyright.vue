@@ -1,8 +1,8 @@
 <template>
   <div class="copyright">
     <ul>
-      <p> Design by <a href="#">Zhangsan</a></p>
-      <p>粤ICP备111111111号-1</p>
+      <p> Design by <a href="javascript:void(0);">Zhangsan</a></p>
+      <!--<p>粤ICP备111111111号-1</p>-->
       </p>
     </ul>
   </div>
