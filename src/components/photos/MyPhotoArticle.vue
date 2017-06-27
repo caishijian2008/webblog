@@ -18,11 +18,11 @@ export default {
 </script>
 
 <style scoped>
-article {
+/*article {
     width: 73%;
     float: left;
     background: transparent;
-}
+}*/
 
 .about_h {
     font-size: 12px;

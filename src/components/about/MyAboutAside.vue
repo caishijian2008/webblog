@@ -23,12 +23,6 @@ export default {
 }
 </script>
 
-<style>
-aside {
-    width: 27%;
-    /* background: url(../images/ibodybg.png) -170px -147px no-repeat #000; */
-    background: transparent;
-    float: right;
-}
+<style scoped>
 
 </style>

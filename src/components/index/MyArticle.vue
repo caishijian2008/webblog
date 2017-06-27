@@ -20,7 +20,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 article {
     width: 73%;
     float: left;

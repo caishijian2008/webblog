@@ -24,9 +24,5 @@ export default {
 </script>
 
 <style scoped>
-aside {
-    width: 27%;
-    background: transparent;
-    float: right;
-}
+
 </style>
