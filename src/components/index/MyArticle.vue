@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import mybanner from '../../components/index/MyBanner'
-import myindexblogs from '../../components/index/MyIndexBlogs'
+import mybanner from '@/components/index/MyBanner'
+import myindexblogs from '@/components/index/MyIndexBlogs'
 export default {
   name: 'myarticle',
   components: {

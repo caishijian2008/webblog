@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import myasidehotnews from '../../components/index/MyAsideHotNews'
-import myasideintronews from '../../components/index/MyAsideIntroNews'
+import myasidehotnews from '@/components/index/MyAsideHotNews'
+import myasideintronews from '@/components/index/MyAsideIntroNews'
 export default {
   name: 'myasidetjnews',
   components: {
