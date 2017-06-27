@@ -1,20 +1,23 @@
 <template>
   <aside>
-    <mycatenav></mycatenav>
+    <myasideinfo></myasideinfo>
     <myasideall></myasideall>
+    <myasideLink></myasideLink>
     <mycopyright></mycopyright>
   </aside>
 </template>
 
 <script>
-import mycatenav from '@/components/common/pages/mycatenav'
+import myasideinfo from '@/components/common/pages/MyAsideInfo'
 import myasideall from '@/components/bloglist/myasideall'
+import myasideLink from '@/components/common/pages/MyAsideLink'
 import mycopyright from '@/components/common/pages/MyCopyright'
 export default {
-  name: 'myblogaside',
+  name: 'myphotoaside',
   components: {
-    mycatenav,
+    myasideinfo,
     myasideall,
+    myasideLink,
     mycopyright
   }
 }
@@ -26,5 +29,4 @@ aside {
     background: transparent;
     float: right;
 }
-
 </style>

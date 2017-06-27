@@ -3,8 +3,8 @@
     <div class="ibody">
       <myheader></myheader>
       <mynav></mynav>
-      <myaboutarticle></myaboutarticle>
-      <myaboutaside></myaboutaside>
+      <myphotoarticle></myphotoarticle>
+      <myphotoaside></myphotoaside>
       <totopbtn></totopbtn>
       <div class="clear"></div>
     </div>
@@ -15,8 +15,8 @@
 <script>
 import myheader from '@/components/common/pages/myheader'
 import mynav from '@/components/common/pages/mynav'
-import myaboutaside from '@/components/about/myaboutaside'
-import myaboutarticle from '@/components/about/myaboutarticle'
+import myphotoaside from '@/components/photos/myphotoaside'
+import myphotoarticle from '@/components/photos/myphotoarticle'
 import totopbtn from '@/components/common/pages/totopbtn'
 import myfooter from '@/components/common/pages/myfooter'
 export default {
@@ -24,8 +24,8 @@ export default {
   components: {
     myheader,
     mynav,
-    myaboutaside,
-    myaboutarticle,
+    myphotoaside,
+    myphotoarticle,
     totopbtn,
     myfooter
   }
