@@ -12,40 +12,49 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
   // data: function () {
   //   return {
   //     msg: '123'
   //   }
   // },
-  // beforeCreate: function () {
-  //   console.log('beforeCreate')
-  // },
-  // created: function () {
-  //   console.log('created')
-  // },
-  // beforeMount: function () {
-  //   console.log('beforeMount')
-  // },
-  // mounted: function () {
-  //   console.log('mounted')
-  // },
-  // beforeUpdate: function () {
-  //   console.log('beforeUpdate')
-  // },
-  // updated: function () {
-  //   console.log('updated')
-  // },
-  // activated: function () {
-  //   console.log('activated')
-  // },
-  // deactivated: function () {
-  //   console.log('deactivated')
-  // },
-  // beforeDestroy: function () {
-  //   console.log('beforeDestroy')
-  // },
-  // destroyed: function () {
-  //   console.log('destroyed')
-  // }
+  beforeCreate: function () {
+    console.log('beforeCreate')
+  },
+  created: function () {
+    console.log('created')
+  },
+  beforeMount: function () {
+    console.log('beforeMount')
+  },
+  mounted: function () {
+    console.log('mounted')
+    // var obj = null
+    // var topnav = document.getElementById('topnav').getElementsByTagName('a')
+    // obj = topnav[0]
+    // for (var i = 1; i < topnav.length; i++) {
+    //   if (window.location.href.indexOf(topnav[i].href) >= 0) {
+    //     obj = topnav[i]
+    //   }
+    // }
+    // obj.id = 'topnav_current'
+  },
+  beforeUpdate: function () {
+    console.log('beforeUpdate')
+  },
+  updated: function () {
+    console.log('updated')
+  },
+  activated: function () {
+    console.log('activated')
+  },
+  deactivated: function () {
+    console.log('deactivated')
+  },
+  beforeDestroy: function () {
+    console.log('beforeDestroy')
+  },
+  destroyed: function () {
+    console.log('destroyed')
+  }
 })
