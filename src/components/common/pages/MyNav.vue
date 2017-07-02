@@ -14,20 +14,31 @@
 
 <script>
 export default {
-  name: 'mynav'
+  name: 'mynav',
+  mounted: function () {
+    var obj = null
+    var topnav = document.getElementById('topnav').getElementsByTagName('a')
+    obj = topnav[0]
+    for (var i = 1; i < topnav.length; i++) {
+      if (window.location.href.indexOf(topnav[i].href) >= 0) {
+        obj = topnav[i]
+      }
+    }
+    obj.id = 'topnav_current'
+  }
 }
 /* 导航当前页高亮 */
-window.onload = () => {
-  var obj = null
-  var topnav = document.getElementById('topnav').getElementsByTagName('a')
-  obj = topnav[0]
-  for (var i = 1; i < topnav.length; i++) {
-    if (window.location.href.indexOf(topnav[i].href) >= 0) {
-      obj = topnav[i]
-    }
-  }
-  obj.id = 'topnav_current'
-}
+// window.onload = () => {
+//   var obj = null
+//   var topnav = document.getElementById('topnav').getElementsByTagName('a')
+//   obj = topnav[0]
+//   for (var i = 1; i < topnav.length; i++) {
+//     if (window.location.href.indexOf(topnav[i].href) >= 0) {
+//       obj = topnav[i]
+//     }
+//   }
+//   obj.id = 'topnav_current'
+// }
 </script>
 
 <style>

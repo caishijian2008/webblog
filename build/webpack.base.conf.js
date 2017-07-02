@@ -64,13 +64,13 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
-      { // 生产环境部署,add for css
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          extractCSS: true
-        }
-      },
+      // { // 生产环境部署,add for css。不需要了！！
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader',
+      //   options: {
+      //     extractCSS: true
+      //   }
+      // },
       {
         test: /\.js$/,
         loader: 'babel-loader',
