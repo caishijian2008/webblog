@@ -13,12 +13,12 @@
           </div>
           <div class="user-in form-group">
             <label for="password" class="col-sm-2 control-label">密 码</label>
-            <input type="password" id="password" name="password" class="col-sm-10 form-control" placeholder="密码" v-model="passWord">
+            <input type="password" id="password" name="password" class="col-sm-10 form-control" placeholder="密码" v-model.trim="passWord">
           </div>
           <div class="keepme">
             <label class="checkbox"><input type="checkbox" id="keepon" name="keepon" v-model="keepOn">记住我</label>
             <div class="keep-loginbutton">
-              <input type="submit" id="signin" value="登录" @click="userLogin"/>
+              <input type="button" id="signin" value="登录" @click="userLogin">
             </div>
             <div class="clear"> </div>
           </div>
@@ -37,31 +37,60 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+// Vue.prototype.$http = axios
+
+import {accountLogin} from '@/service/getData'
 export default {
   name: 'login',
   data () {
     return {
       msg: '登录',
-      userName: null,
-      passWord: null,
+      userName: '',
+      passWord: '',
       keepOn: false
+    }
+  },
+  computed: {
+    // 判断用户名
+    rightUserName: function () {
+      return /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/gi.test(this.userName)
+    },
+    // 判断密码
+    rightPassword: function () {
+      return /^[a-zA-Z]\w{4,15}$/gi.test(this.passWord)
     }
   },
   methods: {
     userLogin () {
-      alert(this.userName)
-      let param = 'http://localhost:8080/blogserv/loginServlet?action=login'
-      axios.post(param, {
-        username: this.userName,
-        password: this.passWord
-      })
-      .then(function (response) {
-        console.log('response*: ' + response)
-      })
-      .catch(function (error) {
-        console.log('error*: ' + error)
-      })
+      // alert(this.userName)
+      if (!this.rightUserName) {
+        alert('用户名不正确！')
+        return
+      } else if (!this.rightPassword) {
+        alert('密码不正确！')
+        return
+      }
+      // let param = 'http://localhost:8080/blogserv/loginServlet?action=login'
+      accountLogin(this.userName, this.passWord, this.keepOn)
+      // axios.post(param, {
+      //   username: this.userName,
+      //   password: this.passWord
+      // })
+      // .then(function (response) {
+      //   console.log('response*: ' + response)
+      // })
+      // .catch(function (error) {
+      //   console.log('error*: ' + error)
+      // })
+      // this.$http({
+      //   method: 'post',
+      //   url: param,
+      //   data: {
+      //     username: this.userName,
+      //     password: this.passWord
+      //   }
+      // })
     }
   }
 }

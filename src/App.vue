@@ -1,9 +1,9 @@
 <template>
-<div>
+<!--<div>-->
   <router-view></router-view>
   <!--<myfooter></myfooter>-->
   <!--<router-view name="register"></router-view>-->
-</div>
+<!--</div>-->
 </template>
 
 <script>

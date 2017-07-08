@@ -180,7 +180,7 @@ label.checkbox {
 .keepme .checkbox input:checked + i:after {
 	opacity: 1;
 }
-.keep-loginbutton input[type="submit"] {
+.keep-loginbutton #signin {
   color: #FFF;
   font-size: 17px;
   font-weight: 600;
@@ -197,7 +197,7 @@ label.checkbox {
   border: none;
  background: #e21b1b; 
 }
-.keep-loginbutton input[type="submit"]:hover {
+.keep-loginbutton #signin:hover {
  background: #6b6b6b;
  transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -315,7 +315,7 @@ span.login-line {
 /*--login form end here--*/
 /*--meadia quiries start here--*/
 @media(max-width:1440px) {
-  .keep-loginbutton input[type="submit"] {
+  .keep-loginbutton #signin {
     width: 91%;
   }
 }
@@ -340,7 +340,7 @@ h1 {
   padding: 55px 0px 0px 0px;
 }
 
-.keep-loginbutton input[type="submit"] {
+.keep-loginbutton #signin {
   width: 96%;
 }
 
@@ -443,7 +443,7 @@ span.login-line {
 h1 {
   font-size: 27px;
 }
-.keep-loginbutton input[type="submit"] {
+.keep-loginbutton #signin {
   width: 99%;
 }
 .user input[type="text"], .user-in input[type="password"] {
@@ -493,7 +493,8 @@ span.login-line {
 .keep-para .checkbox {
   font-size: 10px;
 }
-.keep-loginbutton input[type="submit"] {
+/*.keep-loginbutton input[type="submit"] {*/
+.keep-loginbutton #signin {
   font-size: 12px;
   width: 100%;
   padding: 6px 15px;
