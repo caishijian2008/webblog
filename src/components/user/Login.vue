@@ -51,46 +51,30 @@ export default {
       keepOn: false
     }
   },
+  mounted: function () {
+    // let body = document.getElementsByTagName('body')[0]
+    // body.style.backgroundColor = '#18bb9b'
+  },
   computed: {
     // 判断用户名
-    rightUserName: function () {
+    isUserName: function () {
       return /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/gi.test(this.userName)
     },
     // 判断密码
-    rightPassword: function () {
+    isPassword: function () {
       return /^[a-zA-Z]\w{4,15}$/gi.test(this.passWord)
     }
   },
   methods: {
     userLogin () {
-      // alert(this.userName)
-      if (!this.rightUserName) {
+      if (!this.isUserName) {
         alert('用户名不正确！')
         return
-      } else if (!this.rightPassword) {
+      } else if (!this.isPassword) {
         alert('密码不正确！')
         return
       }
-      // let param = 'http://localhost:8080/blogserv/loginServlet?action=login'
       accountLogin(this.userName, this.passWord, this.keepOn)
-      // axios.post(param, {
-      //   username: this.userName,
-      //   password: this.passWord
-      // })
-      // .then(function (response) {
-      //   console.log('response*: ' + response)
-      // })
-      // .catch(function (error) {
-      //   console.log('error*: ' + error)
-      // })
-      // this.$http({
-      //   method: 'post',
-      //   url: param,
-      //   data: {
-      //     username: this.userName,
-      //     password: this.passWord
-      //   }
-      // })
     }
   }
 }

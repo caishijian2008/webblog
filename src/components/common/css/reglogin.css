@@ -220,7 +220,8 @@ label.checkbox {
   text-align: center !important;
 }
 
-.keepme .regist input[type="submit"] {
+/*.keepme .regist input[type="submit"] {*/
+.keepme .regist #signup {
   width: 80%;
   font-size: 17px;
   font-weight: 600;
