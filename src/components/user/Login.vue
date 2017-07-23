@@ -40,12 +40,14 @@
 // import axios from 'axios'
 // Vue.prototype.$http = axios
 
-import {accountLogin} from '@/service/getData'
+import { accountLogin } from '@/service/getData'
+import { setLocalStorage } from '@/config/myutils'
 export default {
   name: 'login',
   data () {
     return {
       msg: '登录',
+      userInfo: null,
       userName: '',
       passWord: '',
       keepOn: false
@@ -74,7 +76,21 @@ export default {
         alert('密码不正确！')
         return
       }
-      accountLogin(this.userName, this.passWord, this.keepOn)
+      this.userInfo = accountLogin(this.userName, this.passWord, this.keepOn)
+      // setLocalStorage('user_id', this.userName)
+      this.userInfo.then((res) => {
+        if (res.username === this.userName) {
+          alert('登录成功！')
+          setLocalStorage('user_id', res.username)
+          // console.log(this.$router)
+          this.$router.replace('/')
+        } else {
+          alert(res.username)
+          return
+        }
+      }).catch(function (err) {
+        alert('登录失败：' + err.status)
+      })
     }
   }
 }

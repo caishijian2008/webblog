@@ -16,10 +16,10 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
     }
   }
 
-  alert('url: ' + url)
-  alert('data: ' + data)
-  alert('data2: ' + JSON.stringify(data))
-  alert('type: ' + type)
+  // alert('url: ' + url)
+  // alert('data: ' + data)
+  // alert('data2: ' + JSON.stringify(data))
+  // alert('type: ' + type)
   alert('method: ' + method)
   if (window.fetch && method === 'fetch') {
     let requestConfig = {
@@ -28,7 +28,9 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
       headers: {
         'Accept': 'application/json',
         'Content-type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        // 'Content-type': 'application/x-www-form-urlencoded',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': '*'
       },
       mode: 'cors',
       cache: 'force-cache'
@@ -63,40 +65,26 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
       request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
       request.send(sendData)
       request.onreadystatechange = () => {
-        if (request.readystate === 4) {
+        if (request.readyState === 4) {
           if (request.status === 200) {
             let obj = request.response
-            console.log('obj: ' + obj)
+            console.log('request.response: ' + obj)
+            console.log('ajax响应成功: ' + request.responseText)
             if (typeof obj !== 'object') {
               obj = JSON.parse(obj)
             }
             resolve(obj)
           } else {
+            console.log('ajax响应失败: ' + request.status)
             reject(request)
           }
         }
       }
     })
+    // .then(function (e) {
+    //   console.log('e: ' + e)
+    // }).catch(function (e) {
+    //   console.log('err: ' + e)
+    // })
   }
-  // let sendData = ''
-  // if (type === 'GET') {
-  // //
-  // } else if (type === 'POST') {
-  //   sendData = JSON.stringify(data)
-  //   axios({
-  //     method: type,
-  //     url: url,
-  //     data: {
-  //       'username': data.username,
-  //       'password': data.password
-  //     }
-  //   })
-    // axios.post(url, sendData)
-    // .then(function (response) {
-    //   console.log('response*: ' + response)
-    // })
-    // .catch(function (error) {
-    //   console.log('error*: ' + error)
-    // })
-  // }
 }

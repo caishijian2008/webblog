@@ -47,6 +47,7 @@ export default {
   data () {
     return {
       msg: '注册',
+      userInfo: null,
       eMail: '',
       userName: '',
       passWord: '',
@@ -82,9 +83,16 @@ export default {
         alert('密码不一致！')
         return
       }
-      userRegister(this.eMail, this.userName, this.passWord)
+      this.userInfo = userRegister(this.eMail, this.userName, this.passWord)
       setLocalStorage('user_id', this.userName)
       setLocalStorage('user_pass', this.passWord)
+      console.log('this.userInfo: ' + this.userInfo)
+      this.userInfo.then((res) => {
+        alert(res.msg)
+        this.$router.go(-1)
+      }).catch(function (err) {
+        alert('注册失败：' + err.status)
+      })
     }
   }
 }
