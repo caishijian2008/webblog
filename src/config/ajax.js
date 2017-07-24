@@ -20,7 +20,7 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
   // alert('data: ' + data)
   // alert('data2: ' + JSON.stringify(data))
   // alert('type: ' + type)
-  alert('method: ' + method)
+  // alert('method: ' + method)
   if (window.fetch && method === 'fetch') {
     let requestConfig = {
       credentials: 'include',
@@ -60,7 +60,7 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
       if (type === 'POST') {
         sendData = JSON.stringify(data)
       }
-      alert('sendData: ' + sendData)
+      // alert('sendData: ' + sendData)
       request.open(type, url, true)
       request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
       request.send(sendData)
