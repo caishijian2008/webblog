@@ -1,13 +1,13 @@
 /**
  * 存储localStorage
  */
-export const setLocalStorage = (name, value) => {
+export const setStorage = (name, value) => {
   if (!name) return
   if (typeof value !== 'string') {
     value = JSON.stringify(value)
   }
   if (typeof (Storage) !== 'undefined') {
-    window.localStorage.setItem(name, value)
+    window.sessionStorage.setItem(name, value)
   } else {
     alert('你的浏览器不支持web存储，请更换！')
     console.log('你的浏览器不支持web存储，请更换！')
@@ -17,15 +17,15 @@ export const setLocalStorage = (name, value) => {
 /**
  * 获取localStorage
  */
-export const getLocalStorage = name => {
+export const getStorage = name => {
   if (!name) return
-  return window.localStorage.getItem(name)
+  return window.sessionStorage.getItem(name)
 }
 
 /**
  * 删除localStorage
  */
-export const removeLocalStorage = name => {
+export const removeStorage = name => {
   if (!name) return
-  window.localStorage.removeItem(name)
+  window.sessionStorage.removeItem(name)
 }

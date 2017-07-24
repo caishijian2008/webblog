@@ -41,7 +41,7 @@
 // Vue.prototype.$http = axios
 
 import { accountLogin } from '@/service/getData'
-import { setLocalStorage } from '@/config/myutils'
+import { setStorage } from '@/config/myutils'
 export default {
   name: 'login',
   data () {
@@ -77,11 +77,11 @@ export default {
         return
       }
       this.userInfo = accountLogin(this.userName, this.passWord, this.keepOn)
-      // setLocalStorage('user_id', this.userName)
+      // setStorage('user_id', this.userName)
       this.userInfo.then((res) => {
         if (res.username === this.userName) {
           alert('登录成功！')
-          setLocalStorage('user_id', res.username)
+          setStorage('user_id', res.username)
           // console.log(this.$router)
           this.$router.replace('/')
         } else {

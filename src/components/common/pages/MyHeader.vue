@@ -5,14 +5,14 @@
       <h2>每个人都有自己的小宇宙，只是有的人被发挥到极致，有的人还没完全发挥出来而已。</h2>
     </div>
     <div class="rightheader">
-      <h5 class="inout">
+      <h5 class="inout" v-if="!isLogin">
         <!--<a href="./login.html">登陆</a>&nbsp;|&nbsp;-->
         <router-link to="/login">登陆</router-link>&nbsp;|&nbsp;
         <!--<a href="./register.html">注册</a>-->
         <router-link to="/register">注册</router-link>
       </h5>
-      <h5 class="logout" style="display: none;">
-        <a href="javascript:;">注销(<span id="uname"></span>)</a>
+      <h5 class="logout" v-else>
+        <a href="javascript:;" @click="logout">注销(<span id="uname">{{username}}</span>)</a>
       </h5>
     </div>
     <!-- 导航 -->
@@ -21,8 +21,29 @@
 
 <script>
 // import $ from 'jquery' // 测试用
+import { getStorage, removeStorage } from '@/config/myutils'
 export default {
-  name: 'myheader'
+  name: 'myheader',
+  data () {
+    return {
+      isLogin: false,
+      username: null
+    }
+  },
+  mounted: function () {
+    this.username = getStorage('user_id')
+    if (this.username) {
+      // alert(this.username)
+      this.isLogin = true
+    }
+  },
+  methods: {
+    logout: function () {
+      removeStorage('user_id')
+      alert('您已经退出登录！')
+      this.$router.go('/')
+    }
+  }
 }
 // alert($('.leftheader h2').text())  // 测试用
 </script>

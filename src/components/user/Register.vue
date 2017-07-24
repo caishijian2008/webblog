@@ -41,7 +41,7 @@
 </template>
 <script>
 import {userRegister} from '@/service/getData'
-import { setLocalStorage } from '@/config/myutils'
+import { setStorage } from '@/config/myutils'
 export default {
   name: 'register',
   data () {
@@ -84,8 +84,8 @@ export default {
         return
       }
       this.userInfo = userRegister(this.eMail, this.userName, this.passWord)
-      setLocalStorage('user_id', this.userName)
-      setLocalStorage('user_pass', this.passWord)
+      setStorage('user_id', this.userName)
+      setStorage('user_pass', this.passWord)
       console.log('this.userInfo: ' + this.userInfo)
       this.userInfo.then((res) => {
         alert(res.msg)
