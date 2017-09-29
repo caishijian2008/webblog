@@ -4,20 +4,37 @@
     <div class="info">
       <table>
         <tbody>
-          <tr><th>基本信息：</th></tr>
+          <tr>
+            <th>基本信息：</th>
+          </tr>
         </tbody>
       </table>
-    <!--</div>
-    <div>-->
-       <table class="personTable">
-         <tbody>
-          <tr><td>性&nbsp;别：</td><td>男</td></tr>
-          <tr><td>生&nbsp;日：</td><td>1990年1月1日</td></tr>
-          <tr><td>职&nbsp;业：</td><td>职员</td></tr>
-          <tr><td>现居地：</td><td>广东-广州</td></tr>
-          <tr><td>家&nbsp;乡：</td><td>广东-广州</td></tr>
-         </tbody>
-       </table>
+      <!--</div>
+          <div>-->
+      <table class="personTable">
+        <tbody>
+          <tr>
+            <td>性&nbsp;别：</td>
+            <td>男</td>
+          </tr>
+          <tr>
+            <td>生&nbsp;日：</td>
+            <td>1990年1月1日</td>
+          </tr>
+          <tr>
+            <td>职&nbsp;业：</td>
+            <td>职员</td>
+          </tr>
+          <tr>
+            <td>现居地：</td>
+            <td>广东-广州</td>
+          </tr>
+          <tr>
+            <td>家&nbsp;乡：</td>
+            <td>广东-广州</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <hr />
     <h2>个人简介</h2>
@@ -39,30 +56,39 @@
 
 <script>
 export default {
-  name: 'myarticle'
+  name: 'myarticle',
+  components: {
+
+  },
+  data () {
+    return {
+      content: ''
+    }
+  }
 }
 
 </script>
 
 <style scoped>
 .about {
-    line-height: 22px;
-    margin: 20px;
+  line-height: 22px;
+  margin: 20px;
+  height: 30em;
 }
 
 .about h2 {
-    font-size: 22px;
-    font-family: inherit;
-    margin: 15px 0 20px;
-    color: #524249;
+  font-size: 22px;
+  font-family: inherit;
+  margin: 15px 0 20px;
+  color: #524249;
 }
 
 .about p {
-    margin-bottom: 15px
+  margin-bottom: 15px
 }
 
 .blog_a {
-    color: #333
+  color: #333
 }
 
 .info,
@@ -72,41 +98,45 @@ export default {
 }
 
 table,
-td, 
+td,
 th {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 table {
-    border-collapse: separate;
-    border-spacing: 2px;
-    border-color: grey;
-    color: #333;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+  color: #333;
 }
 
 .personTable {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    border: 1px solid #999494;
+.postmsg {
+  height: 300px;
+}
+
+.message {
+  width: 680px;
+  height: 180px;
+  margin-bottom: 5px;
+  border: 1px solid #999494;
 }
 
 form input[type="submit"] {
-    font-size: 16px;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    cursor: pointer;
-    color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
-    text-align: center;
-    border-radius: 4px;
-    line-height: 1.5em;
-    width: 10%;
+  font-size: 16px;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  cursor: pointer;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 1.5em;
+  width: 10%;
 }
-
 </style>

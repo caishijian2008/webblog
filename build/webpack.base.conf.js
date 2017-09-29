@@ -24,17 +24,17 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'jquery': 'jquery' // add for jquery
+      '@': resolve('src')
+      // 'jquery': 'jquery' // add for jquery
       // 'bootstrap': resolve('src/assets/bootstrap') // add for bootstrap
     }
   },
   plugins: [
     // new webpack.optimize.CommonsChunkPlugin('common.js'), // add all for jquery
-    new webpack.ProvidePlugin({  // add all for jquery
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
+    // new webpack.ProvidePlugin({  // add all for jquery
+    //   $: 'jquery',
+    //   jQuery: 'jquery'
+    // }),
     new webpack.DefinePlugin({ // 生产环境部署,指定生产环境
       'process.env': {
         NODE_ENV: '"production"'

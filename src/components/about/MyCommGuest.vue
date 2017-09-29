@@ -1,5 +1,6 @@
 <template>
   <div class="ph_news">
+    <myaboutafterlogin></myaboutafterlogin>
     <myasidecomm></myasidecomm>
     <myasideguest></myasideguest>
   </div>
@@ -8,11 +9,13 @@
 <script>
 import myasidecomm from '@/components/bloglist/myasidecomm'
 import myasideguest from '@/components/bloglist/myasideguest'
+import myaboutafterlogin from '@/components/about/myaboutafterlogin'
 export default {
   name: 'mycommguest',
   components: {
     myasidecomm,
-    myasideguest
+    myasideguest,
+    myaboutafterlogin
   }
 }
 </script>
