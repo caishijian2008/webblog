@@ -1,17 +1,20 @@
 <template>
   <article>
     <h2 class="about_h">您现在的位置是：<router-link to="/">首页</router-link>&gt;<router-link to="/about">关于我</router-link></h2>
-    <myarticle></myarticle>
+    <!--<myarticle></myarticle>-->
+    <myblogs></myblogs>
     <!--<div class="page"><b>1</b><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">&gt;</a><a href="#">&gt;&gt;</a></div>-->
   </article>
 </template>
 
 <script>
 import myarticle from '@/components/about/myarticle'
+import myblogs from '@/components/about/myblogs'
 export default {
   name: 'myaboutarticle',
   components: {
-    myarticle
+    myarticle,
+    myblogs
   }
 }
 

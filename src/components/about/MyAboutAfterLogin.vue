@@ -4,8 +4,8 @@
       <p>{{msg}}</p>
     </h2>
     <ul class="listt">
-      <li class="rnav2">我的资料</li>
-      <li class="rnav4">我的博客</li>
+      <li class="rnav2"><router-link to="/about">我的资料</router-link></li>
+      <li class="rnav4"><router-link to="/myblogs">我的博客</router-link></li>
     </ul>
   </div>
 </template>
