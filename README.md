@@ -1,7 +1,7 @@
 # webblog
 
 > A Vue.js project
-> 一个极不成熟的博客项目
+> 一个极不成熟的博客项目，放弃了
 
 ## Build Setup
 
